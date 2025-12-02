@@ -4,7 +4,7 @@ import torch.nn as nn
 import logging
 from flyvis.task.decoder import ActivityDecoder
 from flyvis.utils.nn_utils import n_params
-
+import torch.nn.functional as F
 __all__ = ["VelocityTemporalDecoder", "second_diff_loss"]
 
 def second_diff_loss(conv_weight):
