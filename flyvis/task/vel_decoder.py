@@ -78,6 +78,7 @@ class VelocityTemporalDecoder(ActivityDecoder):
         # 1) decode DVS representation, get (B, T, C_all, n_hexals)
         self.dvs_channels.update(activity)
         x = self.dvs_channels.output  # (B, T, C_all, n_hexals)
+        x = F.relu(x)
 
         # 2) pool each T4/T5 subtype across hexals -> (B, T, C)
         pools = []
