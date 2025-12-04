@@ -409,7 +409,7 @@ class NaturalMovie(MultiTaskDataset):
         # contrast_out = _compute_contrast(lum_out)  # (T_out, 1, n_hex)
 
         return {
-            "raw_lum": lum_out,
+            "lum": lum_out,
             "lum_mano": _mano_normalize_sequence(lum_out),
             "contrast":  _compute_contrast(lum_out),
             "vel": vel_out,
